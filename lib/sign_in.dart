@@ -46,8 +46,3 @@ void signOutGoogle(context) async{
   Navigator.pop(context);
   print("User Sign Out");
 }
-
-
-
-
-

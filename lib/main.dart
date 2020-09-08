@@ -1,21 +1,17 @@
 import 'dart:io';
-
-
 import 'package:flutter/material.dart';
 import 'package:googlesignin/second_Screen.dart';
 import 'package:googlesignin/sign_in.dart';
-import 'package:googlesignin/third_Screen.dart';
 import 'first_screen.dart';
 import 'contsants/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 
 void main() async  {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
 }
-
-
 
 
 
@@ -31,7 +27,7 @@ class MyApp extends StatelessWidget {
       
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Login(title:Strings.LOGIN_SCREEN_TITLE),
+      home: SecondScreen(),
     );
   }
 }
@@ -171,13 +167,13 @@ class _LoginState extends State<Login> {
       splashColor: Colors.grey,
       onPressed: () {
     
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) {
-            return ThirdScreen();
-          },
-        ),
-    );
+    //   Navigator.of(context).push(
+    //     MaterialPageRoute(
+    //       builder: (context) {
+    //      //   return ThirdScreen();
+    //       },
+    //     ),
+    // );
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       highlightElevation: 0,
@@ -204,11 +200,5 @@ class _LoginState extends State<Login> {
       ),
     );
   }
-
-
-
-
-
-
 
 }

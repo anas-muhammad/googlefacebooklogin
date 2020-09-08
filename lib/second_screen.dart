@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:googlesignin/sign_in.dart';
@@ -123,12 +122,12 @@ class _SecondScreenState extends State<SecondScreen> {
     );
   }
 
-  _displayLoginButton() {
-    return RaisedButton(
-      child: Text("Login with Facebook"),
-      onPressed: () => initiateFacebookLogin(),
-    );
-  }
+  // _displayLoginButton() {
+  //   return RaisedButton(
+  //     child: Text("Login with Facebook"),
+  //     onPressed: () => initiateFacebookLogin(),
+  //   );
+  // }
 
   _logout() async {
     await facebookLogin.logOut();

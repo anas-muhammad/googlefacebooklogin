@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:googlesignin/contsants/constants.dart';
 import 'package:googlesignin/sign_in.dart';
-import 'contsants/constants.dart';
+import 'main.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -21,8 +22,7 @@ class FirstScreen extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: NetworkImage(
-                 photoURL,
-                 
+                  photoURL,
                 ),
                 radius: 60,
                 backgroundColor: Colors.transparent,
@@ -38,7 +38,7 @@ class FirstScreen extends StatelessWidget {
               Text(
                 name,
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
@@ -53,21 +53,21 @@ class FirstScreen extends StatelessWidget {
               Text(
                 email,
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 40),
               RaisedButton(
                 onPressed: () {
-               signOutGoogle(context);
+                signOutGoogle(context);
                 },
                 color: Colors.deepPurple,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     Strings.SIGNOUT,
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 25, color: Colors.white),
                   ),
                 ),
                 elevation: 5,
